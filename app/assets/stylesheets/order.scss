@@ -1,0 +1,16 @@
+.orders-show {
+
+  .order-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .no-bullet-points{
+    list-style: none;
+  }
+
+  .order-img {
+    vertical-align: middle;
+    width: 50%;
+    height: 50%;
+  }
+}

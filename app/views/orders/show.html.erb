@@ -8,6 +8,24 @@
     <h4>Thank you for your order!</h4>
   </div>
 
+  
+  <h2>Order Items:</h2>
+
+  <ul class="no-bullet-points">
+    <% @order.line_items.each do |item| %>
+      <li>
+      <div class="order-item">
+       <%= item.quantity %> x <%= item.product.name %> <%= image_tag item.product.image.url, class: 'order-img' %>  <%= item.product.description %> <br> <strong class="font-weight-bold"> Item Price:  <%=humanized_money_with_symbol item.total_price %></strong>
+      <div>
+      <br>
+       </li>
+    <% end %>
+    
+    <strong class="font-weight-bold total-amount" style="font-size: 2em;">
+      Total: <%= humanized_money_with_symbol @order.total_cents / 100 %>
+    </strong>
+
+      <br>
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
