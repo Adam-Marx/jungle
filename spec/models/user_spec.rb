@@ -56,8 +56,8 @@ RSpec.describe User, type: :model do
     it 'is not valid with a password shorter than 6 characters' do
       @user.password = 'short'
       expect(@user).to_not be_valid
-      expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)")
-    end
+      expect(@user.errors.full_messages_for(:password)).to include("Password is too short (minimum is 6 characters)")
+    end    
 
     it 'is not valid when password and password_confirmation do not match' do
       @user.password_confirmation = 'notsecret'
@@ -95,3 +95,6 @@ RSpec.describe User, type: :model do
     it 'authenticates with email with leading/trailing spaces' do
       user = User.authenticate_with_credentials('  test@test.com  ', 'secret')
       expect(user).to eq(@user)
+    end
+  end
+end
