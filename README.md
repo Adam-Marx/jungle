@@ -16,6 +16,18 @@ Worked on several features that include:
 
 And various fixes to existing features.
 
+
+Individual Product Page
+![image](https://user-images.githubusercontent.com/118940458/225482363-49fa6e54-1267-48fb-96ca-31ac9b6d98dd.png)
+
+Post-Payment Order Page
+![image](https://user-images.githubusercontent.com/118940458/225482464-7e9147e3-cf37-4e6a-b37b-9221bbfaae0b.png)
+
+Admin Products Page
+![image](https://user-images.githubusercontent.com/118940458/225482519-82fff2bc-5d21-4882-bf46-35354f6999b3.png)
+
+
+
 ## Testing
 
 The project introduced me to the Rspec library for testing code in Rails. 
